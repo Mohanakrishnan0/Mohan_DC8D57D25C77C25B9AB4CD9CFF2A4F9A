@@ -1,10 +1,16 @@
-def fact(n):
-    if n == 1:
-        # base case, when to discontinue recursion
-        return 1
-    else:
-        return n*fact(n-1)
-        # recursive call
+def linearSearchProduct(productList, targetProduct):
+  indices = []
 
-print(fact(5))
-# initial call
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+
+  return indices
+
+
+# Example usage:
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+target2 = 'apple'
+result = linearSearchProduct(products, target)
+print(result)
